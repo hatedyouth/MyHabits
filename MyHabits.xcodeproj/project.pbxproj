@@ -13,6 +13,10 @@
 		663298F12798A5C1007F7E2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663298EF2798A5C1007F7E2A /* Main.storyboard */; };
 		663298F32798A5C2007F7E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 663298F22798A5C2007F7E2A /* Assets.xcassets */; };
 		663298F62798A5C2007F7E2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663298F42798A5C2007F7E2A /* LaunchScreen.storyboard */; };
+		663298FF2798B0C0007F7E2A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663298FE2798B0C0007F7E2A /* Colors.swift */; };
+		663A5F772799D5F300A1EAC0 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 663A5F742799D5F300A1EAC0 /* SF-Pro-Text-Regular.otf */; };
+		663A5F782799D5F300A1EAC0 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 663A5F752799D5F300A1EAC0 /* SF-Pro-Text-Semibold.otf */; };
+		663A5F792799D5F300A1EAC0 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 663A5F762799D5F300A1EAC0 /* SF-Pro-Display-Semibold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		663298F22798A5C2007F7E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		663298F52798A5C2007F7E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		663298F72798A5C2007F7E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		663298FE2798B0C0007F7E2A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		663A5F742799D5F300A1EAC0 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		663A5F752799D5F300A1EAC0 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		663A5F762799D5F300A1EAC0 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		663298E82798A5C1007F7E2A /* MyHabits */ = {
 			isa = PBXGroup;
 			children = (
+				663298FD2798B09F007F7E2A /* SupportFiles */,
 				663298E92798A5C1007F7E2A /* AppDelegate.swift */,
 				663298EB2798A5C1007F7E2A /* SceneDelegate.swift */,
 				663298ED2798A5C1007F7E2A /* ViewController.swift */,
@@ -65,6 +74,25 @@
 				663298F72798A5C2007F7E2A /* Info.plist */,
 			);
 			path = MyHabits;
+			sourceTree = "<group>";
+		};
+		663298FD2798B09F007F7E2A /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				663299002798B406007F7E2A /* Fonts */,
+				663298FE2798B0C0007F7E2A /* Colors.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		663299002798B406007F7E2A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				663A5F762799D5F300A1EAC0 /* SF-Pro-Display-Semibold.otf */,
+				663A5F742799D5F300A1EAC0 /* SF-Pro-Text-Regular.otf */,
+				663A5F752799D5F300A1EAC0 /* SF-Pro-Text-Semibold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +153,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				663A5F792799D5F300A1EAC0 /* SF-Pro-Display-Semibold.otf in Resources */,
 				663298F62798A5C2007F7E2A /* LaunchScreen.storyboard in Resources */,
 				663298F32798A5C2007F7E2A /* Assets.xcassets in Resources */,
+				663A5F782799D5F300A1EAC0 /* SF-Pro-Text-Semibold.otf in Resources */,
+				663A5F772799D5F300A1EAC0 /* SF-Pro-Text-Regular.otf in Resources */,
 				663298F12798A5C1007F7E2A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				663298EE2798A5C1007F7E2A /* ViewController.swift in Sources */,
+				663298FF2798B0C0007F7E2A /* Colors.swift in Sources */,
 				663298EA2798A5C1007F7E2A /* AppDelegate.swift in Sources */,
 				663298EC2798A5C1007F7E2A /* SceneDelegate.swift in Sources */,
 			);
