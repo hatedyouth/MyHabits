@@ -24,7 +24,6 @@ class HabitsViewController: UIViewController {
             barButtonSystemItem: .add,
             target: self,
             action: #selector(addhabit))
-        
     }
     
     @objc func addhabit ()
