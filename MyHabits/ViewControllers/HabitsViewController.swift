@@ -26,8 +26,15 @@ class HabitsViewController: UIViewController {
             action: #selector(addhabit))
     }
     
-    @objc func addhabit ()
-    { print("скоро здесь всё будет")
+    @objc func addhabit (_ sender: UIBarButtonItem) {
+        let addHabitVC = HabitViewController()
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.moveIn
+        transition.subtype = CATransitionSubtype.fromTop
+        navigationController?.view.layer.add(transition, forKey: nil)
+        navigationController?.present(addHabitVC, animated: true)
         
     }
 }
