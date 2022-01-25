@@ -10,14 +10,21 @@ import UIKit
 
 struct HabitViewControllerConstants {
     static let title: String = "Создать"
+    static let habitTitleLabel: String = "НАЗВАНИЕ"
     static let titleTextFieldPlaceholder: String = "Бегать по утрам, спать 8 часов и т.п."
     static let habitColorLabel: String = "ЦВЕТ"
     static let habitTimeTitleLable: String = "ВРЕМЯ"
     static let attributedString1: String = "Каждый день в "
     static let habitDeleteButtonTitle: String = "Удалить привычку"
     static let cancelButtonTitle: String = "Отменить"
-
-
+    static let saveButtonTitle: String = "Сохранить"
+    static let deleteAlertTitle: String = "Удалить привычку"
+    static let cancelActionTitle: String = "Отмена"
+    static let deleteActionTitle: String = "Удалить"
+    static let leadingMargin: CGFloat = 16
+    static let topMargin: CGFloat = 7
+    static let trailingMargin: CGFloat = -16
+    static let bottomMargin: CGFloat = -18
 }
 
 

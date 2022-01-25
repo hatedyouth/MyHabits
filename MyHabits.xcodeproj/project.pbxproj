@@ -17,6 +17,11 @@
 		663A5F772799D5F300A1EAC0 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 663A5F742799D5F300A1EAC0 /* SF-Pro-Text-Regular.otf */; };
 		663A5F782799D5F300A1EAC0 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 663A5F752799D5F300A1EAC0 /* SF-Pro-Text-Semibold.otf */; };
 		663A5F792799D5F300A1EAC0 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 663A5F762799D5F300A1EAC0 /* SF-Pro-Display-Semibold.otf */; };
+		66567FB8279F34CD00954B17 /* HabitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66567FB7279F34CD00954B17 /* HabitStore.swift */; };
+		665A13F227A07A4D004DA771 /* HabitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665A13F127A07A4D004DA771 /* HabitDetailsViewController.swift */; };
+		665A13F527A07F40004DA771 /* HabitDetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665A13F427A07F40004DA771 /* HabitDetailsViewCell.swift */; };
+		665A13F727A08A00004DA771 /* HabitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665A13F627A08A00004DA771 /* HabitCollectionViewCell.swift */; };
+		665A13F927A08E58004DA771 /* ProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665A13F827A08E58004DA771 /* ProgressCollectionViewCell.swift */; };
 		6662E5F8279C18D3008A17E5 /* HabitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662E5F7279C18D3008A17E5 /* HabitsViewController.swift */; };
 		6662E5FA279C6FD5008A17E5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662E5F9279C6FD5008A17E5 /* InfoViewController.swift */; };
 		6662E5FC279C74F0008A17E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662E5FB279C74F0008A17E5 /* Extensions.swift */; };
@@ -39,6 +44,11 @@
 		663A5F742799D5F300A1EAC0 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		663A5F752799D5F300A1EAC0 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		663A5F762799D5F300A1EAC0 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		66567FB7279F34CD00954B17 /* HabitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStore.swift; sourceTree = "<group>"; };
+		665A13F127A07A4D004DA771 /* HabitDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailsViewController.swift; sourceTree = "<group>"; };
+		665A13F427A07F40004DA771 /* HabitDetailsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailsViewCell.swift; sourceTree = "<group>"; };
+		665A13F627A08A00004DA771 /* HabitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCollectionViewCell.swift; sourceTree = "<group>"; };
+		665A13F827A08E58004DA771 /* ProgressCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewCell.swift; sourceTree = "<group>"; };
 		6662E5F7279C18D3008A17E5 /* HabitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewController.swift; sourceTree = "<group>"; };
 		6662E5F9279C6FD5008A17E5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		6662E5FB279C74F0008A17E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -79,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				6662E5F6279C187E008A17E5 /* ViewControllers */,
+				665A13F327A07EC3004DA771 /* Cells */,
 				663298FD2798B09F007F7E2A /* SupportFiles */,
 				663298E92798A5C1007F7E2A /* AppDelegate.swift */,
 				663298EB2798A5C1007F7E2A /* SceneDelegate.swift */,
@@ -95,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				663299002798B406007F7E2A /* Fonts */,
+				66567FB7279F34CD00954B17 /* HabitStore.swift */,
+				6662E600279C7991008A17E5 /* TextStyles.swift */,
 				663298FE2798B0C0007F7E2A /* Colors.swift */,
 				6662E5FB279C74F0008A17E5 /* Extensions.swift */,
 			);
@@ -107,17 +120,27 @@
 				663A5F762799D5F300A1EAC0 /* SF-Pro-Display-Semibold.otf */,
 				663A5F742799D5F300A1EAC0 /* SF-Pro-Text-Regular.otf */,
 				663A5F752799D5F300A1EAC0 /* SF-Pro-Text-Semibold.otf */,
-				6662E600279C7991008A17E5 /* TextStyles.swift */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		665A13F327A07EC3004DA771 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				665A13F427A07F40004DA771 /* HabitDetailsViewCell.swift */,
+				665A13F627A08A00004DA771 /* HabitCollectionViewCell.swift */,
+				665A13F827A08E58004DA771 /* ProgressCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		6662E5F6279C187E008A17E5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6662E5F7279C18D3008A17E5 /* HabitsViewController.swift */,
+				665A13F127A07A4D004DA771 /* HabitDetailsViewController.swift */,
 				6662E603279C9820008A17E5 /* HabitViewController */,
 				6662E5FD279C7637008A17E5 /* InfoViewController */,
-				6662E5F7279C18D3008A17E5 /* HabitsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -214,17 +237,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				665A13F227A07A4D004DA771 /* HabitDetailsViewController.swift in Sources */,
 				663298EE2798A5C1007F7E2A /* ViewController.swift in Sources */,
 				663298FF2798B0C0007F7E2A /* Colors.swift in Sources */,
 				663298EA2798A5C1007F7E2A /* AppDelegate.swift in Sources */,
 				6662E601279C7991008A17E5 /* TextStyles.swift in Sources */,
+				66567FB8279F34CD00954B17 /* HabitStore.swift in Sources */,
 				6662E5F8279C18D3008A17E5 /* HabitsViewController.swift in Sources */,
 				6662E5FF279C766D008A17E5 /* InfoViewControllerConstants.swift in Sources */,
 				6662E5FA279C6FD5008A17E5 /* InfoViewController.swift in Sources */,
 				6662E605279C9846008A17E5 /* HabitViewController.swift in Sources */,
+				665A13F527A07F40004DA771 /* HabitDetailsViewCell.swift in Sources */,
 				663298EC2798A5C1007F7E2A /* SceneDelegate.swift in Sources */,
 				6662E607279C985B008A17E5 /* HabitViewControllerConstants.swift in Sources */,
 				6662E5FC279C74F0008A17E5 /* Extensions.swift in Sources */,
+				665A13F927A08E58004DA771 /* ProgressCollectionViewCell.swift in Sources */,
+				665A13F727A08A00004DA771 /* HabitCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
