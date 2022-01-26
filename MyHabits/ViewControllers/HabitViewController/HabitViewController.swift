@@ -185,7 +185,7 @@ extension HabitViewController: UIColorPickerViewControllerDelegate {
     
     private func closeViewController() {
         let transition = CATransition()
-        transition.duration = 0.3
+        transition.duration = 0.4
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         transition.type = CATransitionType.reveal
         transition.subtype = CATransitionSubtype.fromBottom
@@ -209,6 +209,8 @@ extension HabitViewController: UIColorPickerViewControllerDelegate {
             let Habit = Habit(name: HabitTitleTextField.text ?? "", date: HabitDatePicker.date, color: habitColor)
             HabitsStore.shared.habits.append(Habit)
         }
+    print("ok")
+    
     }
     
     @objc func habitColorViewPresent() {

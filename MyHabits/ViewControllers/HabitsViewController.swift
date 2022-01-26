@@ -22,6 +22,7 @@ class HabitsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
+        self.habitCollectionView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -45,7 +46,7 @@ class HabitsViewController: UIViewController {
     @objc func addHabit (_ sender: UIBarButtonItem) {
         let addHabitVC = HabitViewController()
         let transition = CATransition()
-        transition.duration = 0.3
+        transition.duration = 0.5
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         transition.type = CATransitionType.moveIn
         transition.subtype = CATransitionSubtype.fromTop

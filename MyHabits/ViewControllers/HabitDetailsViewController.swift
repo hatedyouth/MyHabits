@@ -14,6 +14,7 @@ class HabitDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(habitActivityTable)
+        view.backgroundColor = .white
         setupConstraints()
         habitActivityTable.delegate = self
         habitActivityTable.dataSource = self
@@ -100,7 +101,7 @@ extension HabitDetailsViewController: UITableViewDelegate, UITableViewDataSource
         let habitVC = HabitViewController()
         habitVC.habitIndex = self.habitIndex
         let transition = CATransition()
-        transition.duration = 0.3
+        transition.duration = 0.4
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         transition.type = CATransitionType.moveIn
         transition.subtype = CATransitionSubtype.fromTop

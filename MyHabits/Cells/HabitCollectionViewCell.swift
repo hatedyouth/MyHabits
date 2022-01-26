@@ -23,8 +23,6 @@ class HabitCollectionViewCell: UICollectionViewCell {
         setupConstraints()
     }
     
-    // MARK: - UI elements
-    
     private lazy var habitCellBackView: UIView = {
         let habitCellBackView = UIView()
         habitCellBackView.toAutoLayout()
@@ -84,7 +82,7 @@ extension HabitCollectionViewCell {
         habitTitle.text = habit.name
         habitTitle.textColor = habit.color
         habitTime.text = habit.dateString
-        habitCount.text = "Счетчик: \(habit.trackDates.count)"
+        habitCount.text = "Счётчик: \(habit.trackDates.count)"
         if habit.isAlreadyTakenToday {
             habitTrackButton.backgroundColor = habit.color
             habitTrackButton.layer.borderWidth = 0
@@ -112,8 +110,8 @@ extension HabitCollectionViewCell {
             habitTitle.leadingAnchor.constraint(equalTo: habitCellBackView.leadingAnchor, constant: 20),
             habitTitle.trailingAnchor.constraint(equalTo: habitCellBackView.trailingAnchor, constant: -20),
             
-            habitTime.topAnchor.constraint(equalTo: habitTitle.bottomAnchor, constant: 20),
-            habitTime.leadingAnchor.constraint(equalTo: habitCellBackView.leadingAnchor, constant: -20),
+            habitTime.topAnchor.constraint(equalTo: habitTitle.bottomAnchor, constant: 7),
+            habitTime.leadingAnchor.constraint(equalTo: habitCellBackView.leadingAnchor, constant: 20),
             
             habitCount.leadingAnchor.constraint(equalTo: habitCellBackView.leadingAnchor, constant: 20),
             habitCount.bottomAnchor.constraint(equalTo: habitCellBackView.bottomAnchor, constant: -20),
