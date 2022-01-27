@@ -67,7 +67,6 @@ extension HabitDetailsViewController: UITableViewDelegate, UITableViewDataSource
             withIdentifier: HabitDetailsViewCell.id,
             for: indexPath
         ) as! HabitDetailsViewCell
-
         
         let dateArray : [Date] = Array(HabitsStore.shared.dates.reversed())
         cell.textLabel?.text = dateFormatter.string(from: dateArray[indexPath.row])
