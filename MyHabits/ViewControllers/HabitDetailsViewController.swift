@@ -81,7 +81,7 @@ extension HabitDetailsViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "АКТИВНОСТЬ"
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         habitActivityTable.deselectRow(at: indexPath, animated: true)
     }

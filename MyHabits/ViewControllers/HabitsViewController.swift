@@ -35,7 +35,6 @@ class HabitsViewController: UIViewController {
         correctTabBarTitle()
     }
     
-    
     private func configureItems () {
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
@@ -52,8 +51,7 @@ class HabitsViewController: UIViewController {
         transition.subtype = CATransitionSubtype.fromTop
         navigationController?.view.layer.add(transition, forKey: nil)
         navigationController?.pushViewController(addHabitVC, animated: false)
-   }
-   
+    }
     
     private func correctTabBarTitle() {
         self.tabBarController?.viewControllers?[0].tabBarItem.title = NSLocalizedString("Привычки", comment: "")
@@ -75,7 +73,6 @@ class HabitsViewController: UIViewController {
     }()
     
 }
-
 
 extension HabitsViewController {
     

@@ -16,7 +16,7 @@ class HabitViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = HabitViewControllerConstants.title
+        title = "Создать"
         HabitTitleTextField.delegate = self
         hideKeyboard()
         
@@ -38,7 +38,7 @@ class HabitViewController: UIViewController, UITextFieldDelegate {
     
     private lazy var HabitTitleLabel: UILabel = {
         let HabitTitleLabel = UILabel()
-        HabitTitleLabel.text = HabitViewControllerConstants.habitTitleLabel
+        HabitTitleLabel.text = "НАЗВАНИЕ"
         HabitTitleLabel.textFootnote(width: view.frame.width)
         return HabitTitleLabel
     }()
@@ -46,7 +46,7 @@ class HabitViewController: UIViewController, UITextFieldDelegate {
     private lazy var HabitTitleTextField: UITextField = {
         let textfield = UITextField()
         textfield.textHeadline(width: view.frame.width)
-        textfield.placeholder = HabitViewControllerConstants.titleTextFieldPlaceholder
+        textfield.placeholder = "Бегать по утрам, спать 8 часов и т.п."
         textfield.autocorrectionType = .no
         if habitIndex != nil {
             var sortHabitArray = HabitsStore.shared.habits
@@ -60,7 +60,7 @@ class HabitViewController: UIViewController, UITextFieldDelegate {
     
     private lazy var HabitColorLabel: UILabel = {
         let HabitColorLabel = UILabel()
-        HabitColorLabel.text = HabitViewControllerConstants.habitColorLabel
+        HabitColorLabel.text = "ЦВЕТ"
         HabitColorLabel.textFootnote(width: view.frame.width)
         return HabitColorLabel
     }()
@@ -82,7 +82,7 @@ class HabitViewController: UIViewController, UITextFieldDelegate {
     
     private lazy var HabitTimeTitleLable: UILabel = {
         let HabitTimeTitleLable = UILabel()
-        HabitTimeTitleLable.text = HabitViewControllerConstants.habitTimeTitleLable
+        HabitTimeTitleLable.text = "ВРЕМЯ"
         HabitTimeTitleLable.textFootnote(width: view.frame.width)
         return HabitTimeTitleLable
     }()
@@ -115,7 +115,7 @@ class HabitViewController: UIViewController, UITextFieldDelegate {
         let currentTime = dateFormatter.string(from: date)
         
         let attributedStringColor = [NSAttributedString.Key.foregroundColor : ColorStyles.purple]
-        let attributedString1 = NSAttributedString(string: HabitViewControllerConstants.attributedString1, attributes: nil)
+        let attributedString1 = NSAttributedString(string: "Каждый день в ", attributes: nil)
         let attributedString2 = NSAttributedString(string: currentTime, attributes: attributedStringColor)
         
         var concate = NSMutableAttributedString(attributedString: attributedString1)
@@ -135,7 +135,7 @@ class HabitViewController: UIViewController, UITextFieldDelegate {
     private lazy var habitDeleteButton: UIButton = {
         let habitDeleteButton = UIButton()
         habitDeleteButton.toAutoLayout()
-        habitDeleteButton.setTitle(HabitViewControllerConstants.habitDeleteButtonTitle, for: .normal)
+        habitDeleteButton.setTitle("Удалить привычку", for: .normal)
         habitDeleteButton.setTitleColor(.red, for: .normal)
         habitDeleteButton.titleLabel?.font = UIFont(name: "SFProText-Regular", size: 17)
         if habitIndex != nil {
@@ -147,10 +147,10 @@ class HabitViewController: UIViewController, UITextFieldDelegate {
         return habitDeleteButton
     }()
 }
-    
+
 extension HabitViewController: UIColorPickerViewControllerDelegate {
     private func createCancelButton() {
-        let cancelButton = UIBarButtonItem(title: HabitViewControllerConstants.cancelButtonTitle,
+        let cancelButton = UIBarButtonItem(title: "Отменить",
                                            style: UIBarButtonItem.Style.plain,
                                            target: self,
                                            action: #selector(cancelButton))
@@ -167,7 +167,7 @@ extension HabitViewController: UIColorPickerViewControllerDelegate {
     }
     
     private func createSaveButton() {
-        let saveButton = UIBarButtonItem(title: HabitViewControllerConstants.saveButtonTitle,
+        let saveButton = UIBarButtonItem(title: "Сохранить",
                                          style: UIBarButtonItem.Style.plain,
                                          target: self,
                                          action: #selector(saveButton))
@@ -209,8 +209,8 @@ extension HabitViewController: UIColorPickerViewControllerDelegate {
             let Habit = Habit(name: HabitTitleTextField.text ?? "", date: HabitDatePicker.date, color: habitColor)
             HabitsStore.shared.habits.append(Habit)
         }
-    print("ok")
-    
+        print("ok")
+        
     }
     
     @objc func habitColorViewPresent() {
@@ -229,9 +229,9 @@ extension HabitViewController: UIColorPickerViewControllerDelegate {
     @objc func habitDelete() {
         var sortHabitArray = HabitsStore.shared.habits
         sortHabitArray.sort(by: {stripTime(from: $0.date) < stripTime(from: $1.date)})
-        let deleteAlert = UIAlertController(title: HabitViewControllerConstants.deleteAlertTitle, message: "Вы хотите удалить привычку \(sortHabitArray[habitIndex!].name)?", preferredStyle: .alert)
-        deleteAlert.addAction(UIAlertAction(title: NSLocalizedString(HabitViewControllerConstants.cancelActionTitle, comment: ""), style: .cancel, handler: nil))
-        deleteAlert.addAction(UIAlertAction(title: HabitViewControllerConstants.deleteActionTitle, style: .destructive, handler: { [self] _ in
+        let deleteAlert = UIAlertController(title: "Удалить привычку", message: "Вы хотите удалить привычку \(sortHabitArray[habitIndex!].name)?", preferredStyle: .alert)
+        deleteAlert.addAction(UIAlertAction(title: NSLocalizedString("Отмена", comment: ""), style: .cancel, handler: nil))
+        deleteAlert.addAction(UIAlertAction(title: "Удалить", style: .destructive, handler: { [self] _ in
             let habitIndexForDelete = HabitsStore.shared.habits.firstIndex(of: sortHabitArray[self.habitIndex!])
             if let index = habitIndexForDelete {
                 HabitsStore.shared.habits.remove(at: index)
@@ -249,7 +249,7 @@ extension HabitViewController: UIColorPickerViewControllerDelegate {
         let date = HabitDatePicker.date
         let currentTime = dateFormatter.string(from: date)
         let attributedStringColor = [NSAttributedString.Key.foregroundColor : ColorStyles.purple]
-        let attributedString1 = NSAttributedString(string: HabitViewControllerConstants.attributedString1, attributes: nil)
+        let attributedString1 = NSAttributedString(string: "Каждый день в ", attributes: nil)
         let attributedString2 = NSAttributedString(string: currentTime, attributes: attributedStringColor)
         let concate = NSMutableAttributedString(attributedString: attributedString1)
         concate.append(attributedString2)
@@ -259,30 +259,30 @@ extension HabitViewController: UIColorPickerViewControllerDelegate {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             
-            HabitTitleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: HabitViewControllerConstants.topMargin * 3),
-            HabitTitleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: HabitViewControllerConstants.leadingMargin),
+            HabitTitleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 21),
+            HabitTitleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             
-            HabitTitleTextField.topAnchor.constraint(equalTo: HabitTitleLabel.bottomAnchor, constant: HabitViewControllerConstants.topMargin),
-            HabitTitleTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: HabitViewControllerConstants.leadingMargin),
-            HabitTitleTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: HabitViewControllerConstants.trailingMargin),
+            HabitTitleTextField.topAnchor.constraint(equalTo: HabitTitleLabel.bottomAnchor, constant: 7),
+            HabitTitleTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            HabitTitleTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             
-            HabitColorLabel.topAnchor.constraint(equalTo: HabitTitleTextField.bottomAnchor, constant: (HabitViewControllerConstants.topMargin * 2) - 1),
-            HabitColorLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: HabitViewControllerConstants.leadingMargin),
+            HabitColorLabel.topAnchor.constraint(equalTo: HabitTitleTextField.bottomAnchor, constant: 13),
+            HabitColorLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             
-            HabitColor.topAnchor.constraint(equalTo: HabitColorLabel.bottomAnchor, constant: HabitViewControllerConstants.topMargin),
-            HabitColor.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: HabitViewControllerConstants.leadingMargin),
+            HabitColor.topAnchor.constraint(equalTo: HabitColorLabel.bottomAnchor, constant: 7),
+            HabitColor.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             
-            HabitTimeTitleLable.topAnchor.constraint(equalTo: HabitColor.bottomAnchor, constant: HabitViewControllerConstants.topMargin),
-            HabitTimeTitleLable.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: HabitViewControllerConstants.leadingMargin),
+            HabitTimeTitleLable.topAnchor.constraint(equalTo: HabitColor.bottomAnchor, constant: 7),
+            HabitTimeTitleLable.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             
-            HabitTimeLabel.topAnchor.constraint(equalTo: HabitTimeTitleLable.bottomAnchor, constant: HabitViewControllerConstants.topMargin),
-            HabitTimeLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: HabitViewControllerConstants.leadingMargin),
+            HabitTimeLabel.topAnchor.constraint(equalTo: HabitTimeTitleLable.bottomAnchor, constant: 7),
+            HabitTimeLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             
-            HabitDatePicker.topAnchor.constraint(equalTo: HabitTimeLabel.bottomAnchor, constant: (HabitViewControllerConstants.topMargin * 2) - 1),
+            HabitDatePicker.topAnchor.constraint(equalTo: HabitTimeLabel.bottomAnchor, constant: 13),
             HabitDatePicker.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             HabitDatePicker.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             
-            habitDeleteButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: HabitViewControllerConstants.bottomMargin),
+            habitDeleteButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -18),
             habitDeleteButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }

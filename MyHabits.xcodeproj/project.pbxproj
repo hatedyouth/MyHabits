@@ -25,10 +25,8 @@
 		6662E5F8279C18D3008A17E5 /* HabitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662E5F7279C18D3008A17E5 /* HabitsViewController.swift */; };
 		6662E5FA279C6FD5008A17E5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662E5F9279C6FD5008A17E5 /* InfoViewController.swift */; };
 		6662E5FC279C74F0008A17E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662E5FB279C74F0008A17E5 /* Extensions.swift */; };
-		6662E5FF279C766D008A17E5 /* InfoViewControllerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662E5FE279C766D008A17E5 /* InfoViewControllerConstants.swift */; };
 		6662E601279C7991008A17E5 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662E600279C7991008A17E5 /* TextStyles.swift */; };
 		6662E605279C9846008A17E5 /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662E604279C9846008A17E5 /* HabitViewController.swift */; };
-		6662E607279C985B008A17E5 /* HabitViewControllerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662E606279C985B008A17E5 /* HabitViewControllerConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,10 +50,8 @@
 		6662E5F7279C18D3008A17E5 /* HabitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewController.swift; sourceTree = "<group>"; };
 		6662E5F9279C6FD5008A17E5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		6662E5FB279C74F0008A17E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		6662E5FE279C766D008A17E5 /* InfoViewControllerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewControllerConstants.swift; sourceTree = "<group>"; };
 		6662E600279C7991008A17E5 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		6662E604279C9846008A17E5 /* HabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
-		6662E606279C985B008A17E5 /* HabitViewControllerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewControllerConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,28 +135,10 @@
 			children = (
 				6662E5F7279C18D3008A17E5 /* HabitsViewController.swift */,
 				665A13F127A07A4D004DA771 /* HabitDetailsViewController.swift */,
-				6662E603279C9820008A17E5 /* HabitViewController */,
-				6662E5FD279C7637008A17E5 /* InfoViewController */,
+				6662E5F9279C6FD5008A17E5 /* InfoViewController.swift */,
+				6662E604279C9846008A17E5 /* HabitViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		6662E5FD279C7637008A17E5 /* InfoViewController */ = {
-			isa = PBXGroup;
-			children = (
-				6662E5F9279C6FD5008A17E5 /* InfoViewController.swift */,
-				6662E5FE279C766D008A17E5 /* InfoViewControllerConstants.swift */,
-			);
-			path = InfoViewController;
-			sourceTree = "<group>";
-		};
-		6662E603279C9820008A17E5 /* HabitViewController */ = {
-			isa = PBXGroup;
-			children = (
-				6662E604279C9846008A17E5 /* HabitViewController.swift */,
-				6662E606279C985B008A17E5 /* HabitViewControllerConstants.swift */,
-			);
-			path = HabitViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,12 +222,10 @@
 				6662E601279C7991008A17E5 /* TextStyles.swift in Sources */,
 				66567FB8279F34CD00954B17 /* HabitStore.swift in Sources */,
 				6662E5F8279C18D3008A17E5 /* HabitsViewController.swift in Sources */,
-				6662E5FF279C766D008A17E5 /* InfoViewControllerConstants.swift in Sources */,
 				6662E5FA279C6FD5008A17E5 /* InfoViewController.swift in Sources */,
 				6662E605279C9846008A17E5 /* HabitViewController.swift in Sources */,
 				665A13F527A07F40004DA771 /* HabitDetailsViewCell.swift in Sources */,
 				663298EC2798A5C1007F7E2A /* SceneDelegate.swift in Sources */,
-				6662E607279C985B008A17E5 /* HabitViewControllerConstants.swift in Sources */,
 				6662E5FC279C74F0008A17E5 /* Extensions.swift in Sources */,
 				665A13F927A08E58004DA771 /* ProgressCollectionViewCell.swift in Sources */,
 				665A13F727A08A00004DA771 /* HabitCollectionViewCell.swift in Sources */,

@@ -17,6 +17,19 @@ public extension UIView {
     func toAutoLayout() {
         translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    func colorCircle(width: CGFloat) {
+        if width <= 428 {
+            self.widthAnchor.constraint(equalToConstant: 30).isActive = true
+            self.heightAnchor.constraint(equalToConstant: 30).isActive = true
+            self.layer.cornerRadius = 15
+        }
+        else {
+            self.widthAnchor.constraint(equalToConstant: 60).isActive = true
+            self.heightAnchor.constraint(equalToConstant: 60).isActive = true
+            self.layer.cornerRadius = 30
+        }
+    }
 }
 
 func stripTime(from originalDate: Date) -> Date {

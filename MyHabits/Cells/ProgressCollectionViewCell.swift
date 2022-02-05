@@ -19,8 +19,6 @@ class ProgressCollectionViewCell: UICollectionViewCell {
         setupConstraints()
     }
     
-    
-    
     private lazy var habitsProgressBackView: UIView = {
         let habitsProgressBackView = UIView()
         habitsProgressBackView.toAutoLayout()
